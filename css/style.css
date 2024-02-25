@@ -1,0 +1,399 @@
+:root {
+  --primary: white;
+  --bg: rgb(135, 206, 250);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--primary);
+  color: black;
+  /* min-height: 6000px; */
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: rgba(135, 206, 250, 1);
+  border-bottom: 1px solid rgba(140, 140, 140, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+.navbar .navbar-logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: black;
+}
+
+.navbar .navbar-logo span {
+  font-size: 2rem;
+  font-weight: 700;
+  background-color: rgba(0, 0, 0, 0.623);
+  color: white;
+  border-radius: 10px;
+  font-style: italic;
+  padding: 1px;
+}
+
+.navbar .navbar-nav a {
+  display: inline-block;
+  font-size: 1.2rem;
+  color: black;
+  font-weight: 600;
+  margin: 0 3px;
+}
+.navbar .navbar-nav a:hover {
+  background-color: rgba(0, 0, 0, 0.788);
+  color: white;
+  padding: 5px 3px;
+  border-radius: 6px;
+  transition: 0.2s linear;
+}
+.navbar .navbar-extra a {
+  color: black;
+  margin: 0 0.5rem;
+}
+.navbar .navbar-extra a:hover {
+  color: white;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.315);
+  border-radius: 5rem;
+  transition: 0.2s linear;
+}
+#hamburger-menu {
+  display: none;
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url("../img/annie-spratt-EuzvrisXbS8-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.hero::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 20%;
+  bottom: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 1) 0.5%,
+    rgba(255, 255, 255, 0) 20%
+  );
+}
+.hero .content {
+  padding: 1.4rem 7%;
+  max-width: 60rem;
+}
+.hero .content h1 {
+  font-size: 3rem;
+  color: var(--bg);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+.hero .content h1 span {
+  background-color: rgba(0, 0, 0, 0.637);
+  border-radius: 15px;
+  padding: 1px 5px;
+  color: white;
+}
+.hero .content p {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  line-height: 1.4;
+  font-weight: 400;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+.hero .content .cta {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  font-size: 1.4rem;
+  color: black;
+  background-color: var(--bg);
+  border-radius: 10px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+.artikel,
+.audio,
+.mdk,
+.saya {
+  padding: 7rem 7% 1.4rem;
+}
+.artikel h2,
+.saya h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 3rem;
+  color: var(--bg);
+  width: 35%;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 15px;
+  justify-content: center;
+  align-items: center;
+}
+.artikel .row {
+  display: flex;
+}
+.artikel .row .artikel-img {
+  flex: 1 1 15rem;
+}
+.artikel .row .artikel-img img {
+  width: 100%;
+  box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.8);
+  object-fit: cover;
+  object-position: center;
+}
+.artikel .row .content {
+  flex: 1 1 35rem;
+  padding: 0 1rem;
+}
+.artikel .row .content h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+.artikel .row .content p {
+  margin-bottom: 0.8rem;
+  line-height: 1.6;
+}
+/* bagian audio */
+.audio h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 3rem;
+  color: var(--bg);
+  width: 35%;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 15px;
+  justify-content: center;
+  align-items: center;
+}
+.audio-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.audio-item {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  text-align: center;
+  padding: 1rem;
+}
+
+audio {
+  width: 206px;
+  box-shadow: 1px 2px 1px rgba(0, 0, 0, 0.8);
+  border-radius: 5px;
+}
+img {
+  width: 205px;
+  height: 200px;
+  margin-bottom: 0.5rem;
+  box-shadow: 1px 2px 1px rgba(0, 0, 0, 0.8);
+  object-fit: cover;
+  object-position: center;
+}
+
+/* bagian murottal dan kajian */
+.mdk h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 3rem;
+  color: var(--bg);
+  width: 50%;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 15px;
+  justify-content: center;
+  align-items: center;
+}
+/* bagian video */
+
+.video-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.video-list iframe {
+  width: calc(
+    50% - 20px
+  ); /* Ukuran width diatur agar dua iframe membagi ruang secara horizontal */
+  margin-right: 20px; /* Membuat jarak antara dua iframe */
+  margin-bottom: 20px; /* Membuat jarak antara baris iframe */
+}
+.video-list iframe:nth-child(2n) {
+  margin-right: 0; /* Menghapus margin kanan dari setiap iframe kedua */
+}
+.saya {
+  padding: 7rem 7% 1.4rem;
+}
+.saya .colums {
+  display: flex;
+}
+.saya .colums .saya-img {
+  flex: 1 1 45rem;
+}
+.saya .colums .saya-img img {
+  width: 100%;
+  height: 300px;
+}
+.saya .colums .bio-saya {
+  flex: 1 1 35rem;
+  padding: 0 1rem;
+}
+.saya .colums .bio-saya p {
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 1.6rem;
+}
+footer {
+  background-color: var(--bg);
+  text-align: center;
+  padding: 1rem 0 3rem;
+  margin-top: 3rem;
+}
+footer .social {
+  padding: 1rem 0;
+}
+footer .social a {
+  color: rgba(0, 0, 0, 0.911);
+  margin: 1rem;
+}
+footer .social a:hover,
+footer .links a:hover {
+  color: white;
+  transition: 0.2s;
+}
+footer .links {
+  margin-bottom: 1.4rem;
+}
+footer .links a {
+  color: black;
+  padding: 0.7rem 1rem;
+}
+footer .credit {
+  font-size: 0.8rem;
+}
+footer .credit a {
+  color: black;
+  font-weight: 800;
+}
+@media (max-width: 1080px) {
+  html {
+    font-size: 80%;
+  }
+  #hamburger-menu {
+    display: inline-block;
+  }
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: rgba(135, 206, 250, 0.9);
+    width: 20rem;
+    height: 100vh;
+    transition: 0.4s;
+  }
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+  .navbar .navbar-nav a {
+    color: black;
+    display: block;
+    margin: 1.5rem;
+    padding: 5px;
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+  .artikel .row {
+    flex-wrap: wrap;
+  }
+  .artikel h2 {
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 50%;
+  }
+  .artikel .artikel-img img {
+    height: 20rem;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  .artikel .row .content {
+    padding: 0;
+  }
+  .artikel .row .content h3 {
+    margin-top: 1rem;
+    font-size: 16px;
+  }
+  .audio h2 {
+    width: 70%;
+  }
+  .audio-list {
+    display: flex;
+  }
+  .audio-list .audio-item {
+    flex-direction: column;
+  }
+  .audio-list .audio-item img {
+    width: 300px;
+  }
+  .audio-list .audio-item audio {
+    width: 100%;
+  }
+  .audio-list .audio-item h3 {
+    font-size: 2rem;
+    margin: 5px;
+  }
+  .mdk h2 {
+    padding: 0.5rem 7% 1rem;
+    margin-left: 2rem;
+    text-align: center;
+    font-size: 2rem;
+    color: var(--bg);
+    width: 80%;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+  }
+  .video-list {
+    grid-template-columns: repeat(1, 1fr); /* Mengubah menjadi satu kolom */
+  }
+  .video-list iframe {
+    width: 100%; /* Pada layar lebih kecil, setiap iframe akan mengambil 100% lebar */
+    margin-right: 0; /* Menghapus margin kanan */
+  }
+  .saya h2 {
+    width: 80%;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 70%;
+  }
+}
